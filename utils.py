@@ -51,7 +51,7 @@ def reformat_hotel_reviews(hotel_reviews_df):#'Hotel Olcott'):
 	
 	# getting hotel tones using ibm_watson
 	#ALERT: UNCOMMENT NEXT LINE
-	# modified_hotel_obj['tones'] = get_hotel_tones(hotel_reviews_df)
+	modified_hotel_obj['tones'] = get_hotel_tones(hotel_reviews_df)
 
 	# calculate avg_mean_ratings for a hotel for missed values and hotel has no rates then set it to 0.0s
 	avg_rating_for_missed_values = hotel_reviews_df['reviews.rating'].mean(skipna=True) if hotel_reviews_df['reviews.rating'].count() else 0.0
