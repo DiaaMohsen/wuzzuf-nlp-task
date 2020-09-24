@@ -1,8 +1,7 @@
-import json
-import pandas as pd
-from flask import Flask,request
-import numpy as np
 from utils import get_hotel_tones, reformat_hotel_reviews, initialize_es_instance
+from flask import Flask,request
+import pandas as pd
+import json
 
 app = Flask(__name__)                    
 
@@ -39,7 +38,6 @@ def index_into_es():
 	msg = 'Finished indexing all hotels data into ES.'
 	return msg
 
-# @app.route('/index_hotels_into_es', methods=['GET'])
 @app.route('/get_hotel_data', methods=['GET'])
 def get_hotel_from_es():
 	hotel_name = request.get_json().get('hotel_name')
