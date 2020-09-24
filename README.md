@@ -1,4 +1,4 @@
-This repo is for wuzzuf-task for ml/nlp engineer
+This repo is for wuzzuf-task for ml/nlp engineer vacancy
 
 
 This repo contains 3 end-points in flask_server.py:
